@@ -1,5 +1,6 @@
 import database from './db';
 import { IDatabaseConfig, IAppConfig } from '../interfaces/IConfig';
+require('dotenv').config();
 
 interface Config {
   db: IDatabaseConfig;
@@ -9,7 +10,7 @@ interface Config {
 const config: Config = {
   db: database,
   app: {
-    port: 3000,
+    port: parseInt(process.env.APP_PORT),
   },
 };
 

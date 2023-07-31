@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { IBusiness } from '../interfaces/IBusiness';
 import Business from '../models/businessModel';
 
+
 // Get counts of websites per city
 const getCountsByCity = (req: Request, res: Response) => {
   Business.aggregate([
