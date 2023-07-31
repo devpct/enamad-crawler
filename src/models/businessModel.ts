@@ -10,11 +10,11 @@ const businessSchema = new mongoose.Schema<IBusiness>(
       type: String,
       required: true,
     },
-    state: {
+    city: {
       type: String,
       required: true,
     },
-    star: {
+    stars: {
       type: Number,
       required: true,
     },
@@ -33,6 +33,6 @@ const businessSchema = new mongoose.Schema<IBusiness>(
   }
 );
 
-const Business: Model<IBusiness> = mongoose.model<IBusiness>('Users', businessSchema);
+const Business: Model<IBusiness> = mongoose.model<IBusiness>('businesses', businessSchema);
 
 export default Business;

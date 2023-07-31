@@ -1,11 +1,11 @@
 import { IDatabaseConfig } from '../interfaces/IConfig';
 
 const dbConfig: IDatabaseConfig = {
-  host: 'arthur.iran.liara.ir',
-  port: 34917,
+  host: 'finn.iran.liara.ir',
+  port: 30655,
   name: 'enamad',
   username: 'root',
-  password: 'q3Cuq9OADylRNXkrmQKquuJl',
+  password: 'XDrB4XoEZFInWNmtWRPZVPDl',
 };
 
 export default dbConfig;
