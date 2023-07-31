@@ -1,6 +1,6 @@
-import { Request, Response } from 'express';
-import { IBusiness } from '../interfaces/IBusiness';
-import Business from '../models/businessModel';
+import { Request, Response } from 'express'
+import { IBusiness } from '../interfaces/IBusiness'
+import Business from '../models/businessModel'
 
 
 // Get counts of websites per city
@@ -11,12 +11,12 @@ const getCountsByCity = (req: Request, res: Response) => {
     { $sort: { count: -1 } },
   ])
     .then((cityCounts: IBusiness[]) => {
-      res.json(cityCounts);
+      res.json(cityCounts)
     })
     .catch((error: Error) => {
-      handleErrorResponse(res, error);
-    });
-};
+      handleErrorResponse(res, error)
+    })
+}
 
 
 // Get websites grouped by their star ranking
@@ -27,16 +27,16 @@ const getGroupedByStars = (req: Request, res: Response) => {
     { $project: { _id: 0, starts: '$_id', websites: 1 } }
   ])
     .then((groupedWebsites) => {
-      res.json(groupedWebsites);
+      res.json(groupedWebsites)
     })
     .catch((error: Error) => {
-      handleErrorResponse(res, error);
-    });
-};
+      handleErrorResponse(res, error)
+    })
+}
 
 // Function to handle error responses
 const handleErrorResponse = (res: Response, error: Error) => {
-  res.status(500).json({ message: error.message });
-};
+  res.status(500).json({ message: error.message })
+}
 
-export { getCountsByCity, getGroupedByStars };
+export { getCountsByCity, getGroupedByStars }

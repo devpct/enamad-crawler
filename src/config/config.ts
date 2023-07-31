@@ -1,10 +1,10 @@
-import database from './db';
-import { IDatabaseConfig, IAppConfig } from '../interfaces/IConfig';
-require('dotenv').config();
+import database from './db'
+import { IDatabaseConfig, IAppConfig } from '../interfaces/IConfig'
+require('dotenv').config()
 
 interface Config {
-  db: IDatabaseConfig;
-  app: IAppConfig;
+  db: IDatabaseConfig
+  app: IAppConfig
 }
 
 const config: Config = {
@@ -12,6 +12,6 @@ const config: Config = {
   app: {
     port: parseInt(process.env.APP_PORT),
   },
-};
+}
 
-export default config;
+export default config

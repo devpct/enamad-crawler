@@ -1,4 +1,4 @@
-import { buildSchema } from 'graphql';
+import { buildSchema } from 'graphql'
 
 export const graphQlSchema = buildSchema(`
   scalar Date
@@ -20,4 +20,4 @@ export const graphQlSchema = buildSchema(`
   schema {
     query: RootQuery
   }
-`);
+`)

@@ -1,8 +1,7 @@
-import Business from '../../models/businessModel';
+import Business from '../../models/businessModel'
 
 export const graphQlResolvers = {
-  businesses: async () => {
-    const businesses = await Business.find({});
-    return businesses;
+  businesses: () => {
+    return Business.find({}).exec()
   },
-};
+}

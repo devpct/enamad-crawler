@@ -1,5 +1,5 @@
-import mongoose, { Document, Model } from 'mongoose';
-import { IBusiness } from '../interfaces/IBusiness';
+import mongoose, { Document, Model } from 'mongoose'
+import { IBusiness } from '../interfaces/IBusiness'
 const businessSchema = new mongoose.Schema<IBusiness>(
   {
     domainAddress: {
@@ -31,8 +31,8 @@ const businessSchema = new mongoose.Schema<IBusiness>(
     versionKey: false,
     timestamps: true,
   }
-);
+)
 
-const Business: Model<IBusiness> = mongoose.model<IBusiness>('businesses', businessSchema);
+const Business: Model<IBusiness> = mongoose.model<IBusiness>('businesses', businessSchema)
 
-export default Business;
+export default Business
