@@ -25,7 +25,7 @@ mongoose
 
       console.log(`GraphQL API is now running on \x1b[35mhttp://localhost:${config.app.port}/graphql\x1b[0m`)
 
-      console.log('\x1b[1m\x1b[37mDownload the excel file of the database http://localhost:3000/v1/export-csv\x1b[0m')
+      console.log('\x1b[1m\x1b[37mDownload the excel file of the database http://localhost:4000/v1/export-csv\x1b[0m')
 
     })
   })
